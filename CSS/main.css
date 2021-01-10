@@ -250,7 +250,7 @@ body {
   height: 100vh;
   background: var(--color-primary);
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
@@ -261,6 +261,21 @@ body {
 
 .pricing-container__card-container:hover .cards {
   transform: rotateY(180deg);
+}
+
+.pricing-container__btn {
+  margin-top: 3rem;
+  border: none;
+  width: 20rem;
+  height: 7rem;
+  border-radius: 50px;
+  font-size: 2.7rem;
+  font-weight: bold;
+  background: linear-gradient(to bottom right, var(--color-card-btn-gradient-1), var(--color-card-btn-gradient-2));
+  color: #fff;
+  position: absolute;
+  bottom: 8rem;
+  cursor: pointer;
 }
 
 .cards {
@@ -312,6 +327,8 @@ body {
 }
 
 .card-1__back h1, .card-2__back h1, .card-3__back h1 {
+  position: absolute;
+  top: 20rem;
   font-size: 5rem;
 }
 
@@ -327,6 +344,7 @@ body {
   justify-content: space-evenly;
   align-items: center;
   -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .card-1__front-top {
