@@ -255,8 +255,8 @@ body {
 }
 
 .pricing-container__card-container {
-  width: 20rem;
-  height: 30rem;
+  width: 45rem;
+  height: 65rem;
 }
 
 .pricing-container__card-container:hover .cards {
@@ -266,7 +266,7 @@ body {
 .cards {
   width: 100%;
   height: 100%;
-  transition: transform 1s ease-in-out;
+  transition: transform .8s ease-in-out;
   transform-style: preserve-3d;
 }
 
@@ -280,10 +280,39 @@ body {
   transform: rotateY(0deg);
 }
 
+.card-1__front-top, .card-2__front-top, .card-3__front-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 35%;
+  font-size: 3.2rem;
+  color: var(--color-secondary);
+  background: rgba(0, 0, 0, 0.25);
+  background-blend-mode: multiply;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-1__bottom, .card-2__bottom, .card-3__bottom {
+  position: absolute;
+  top: 50%;
+}
+
+.card-1__bottom-list, .card-2__bottom-list, .card-3__bottom-list {
+  color: var(--color-primary);
+  font-size: 3.5rem;
+  font-weight: 600;
+}
+
 .card-1__back, .card-2__back, .card-3__back {
   background: linear-gradient(to bottom right, var(--color-card-gradient-1), var(--color-card-gradient-2));
   color: var(--color-secondary);
   transform: rotateY(180deg);
+}
+
+.card-1__back h1, .card-2__back h1, .card-3__back h1 {
+  font-size: 5rem;
 }
 
 .card-1 figure, .card-2 figure, .card-3 figure {
@@ -291,11 +320,31 @@ body {
   width: 100%;
   height: 100%;
   border-radius: 2rem;
+  border: none;
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  -moz-backface-visibility: hidden;
+}
+
+.card-1__front-top {
+  background-image: url("../img/card-1-photo.jpg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  background-size: cover;
+}
+
+.card-2__front-top {
+  background-image: url("../img/card-2-photo.jpg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  background-size: cover;
+}
+
+.card-3__front-top {
+  background-image: url("../img/card-3-photo.jpg");
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+  background-size: cover;
 }
 
 @keyframes arrowDown {
