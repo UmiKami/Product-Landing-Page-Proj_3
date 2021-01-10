@@ -1,0 +1,175 @@
+.background{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right bottom, var(--color-hero-1), var(--color-hero-2));
+
+    position: absolute;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+//////////////////////////////////////////////////////
+/// HEADER/NAVBAR SECTION
+
+.header-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 0 0 100%;
+
+    &__logo-box{
+        margin-left: 15.5rem;
+    }
+
+    &__logo-png{
+        height: 4rem;
+    }
+
+    &__links-container{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-right: 15.5rem;
+    }
+
+    &__links-box{
+        padding: 4rem 0;
+    }
+
+    &__links{
+        text-decoration: none;
+        color: var(--color-secondary);
+        font-weight: 600;
+        font-size: 2.5rem;
+        transition: all .2s;
+        padding: 4rem 4rem;
+
+        &:hover{
+            background: rgba(0,0,0,0.02)
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+/// HOME SECTION
+
+.home-container{
+    height: 90.59vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secondary);
+    position: relative;
+
+    &__part-1{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        bottom: 40%;
+    }
+
+    &__main-header{
+        flex: 0 0 35%;
+        font-size: 8rem;
+    }
+
+    &__part-2{
+        transform: scale(0.8) rotate(180deg);
+        position: absolute;
+        bottom: 5%;
+
+        #triangle-3, #triangle-4{
+            display: none;
+        }
+
+        #triangle-1, #triangle-2{
+            animation: arrowDown 1s infinite;
+        }
+    }
+}
+
+//////////////////////////////////////////////////////
+/// ABOUT SECTION
+
+.about-container{
+    display: flex;
+    margin: 12rem 0;
+
+
+    &__description{
+        margin-left: 15.5rem;
+        margin-right: 25rem;
+        color: var(--color-primary);
+        font-size: 1.4rem;
+    }
+
+    &__header{
+        text-transform: capitalize;
+        margin-bottom: 4rem;
+        font-weight: 700;
+        font-size: 4rem;
+    }
+
+    &__collage{
+        margin-right: 15.5rem;
+        flex: 0 0 auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__photo-1{
+        width: 62rem;
+        height: 27.8rem;
+        margin-bottom: 2rem;
+        border-radius: 30px;
+    }
+    &__photo-2{
+        width: 30rem;
+        height: 42.5rem;
+        border-radius: 30px;
+    }
+    &__photo-3{
+        width: 30rem;
+        height: 42.5rem;
+        margin-left: 2rem;
+        border-radius: 30px;
+    }
+
+    &__photo-bottom{
+        display: flex;
+    }
+
+    &__view-video-btn{
+        border: none;
+        padding: 3rem 8rem;
+
+        background-image: linear-gradient(to bottom right, var(--color-hero-1), var(--color-button-1));
+        border-radius: 50px;
+
+        font-size: 2.2rem;
+        font-weight: 600;
+
+        color: var(--color-secondary);
+        outline: none;
+
+        cursor: pointer;
+
+        &:active{
+            transform: translateY(-1.5px);
+            box-shadow: 0 2px 3px rgba(0,0,0,.1);
+        }
+    }
+}
+
+.paragraph{
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+}
+
+//////////////////////////////////////////////////////
+/// PRICING SECTION
+
