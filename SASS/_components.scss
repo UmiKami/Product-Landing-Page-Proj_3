@@ -156,12 +156,29 @@
 
         color: var(--color-secondary);
         outline: none;
+        position: relative;
 
         cursor: pointer;
 
         &:active{
             transform: translateY(-1.5px);
             box-shadow: 0 2px 3px rgba(0,0,0,.1);
+        }
+
+        &::after{
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 50px;
+
+            transition: background-color .4s;
+        }
+
+        &:hover::after{
+            background-color: rgba(196, 222, 255, 0.2);
         }
     }
 
@@ -172,7 +189,7 @@
         position: absolute;
         top: -1000rem;
         z-index: 1000;
-        transition: all 1s;
+        transition: all .5s;
 
         display: flex;
         align-items: center;
@@ -217,3 +234,29 @@
 //////////////////////////////////////////////////////
 /// PRICING SECTION
 
+.pricing-container{
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary);
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &__card-container{
+        width: 20rem;
+        height: 30rem;
+
+        &:hover .cards{
+            transform: rotateY(180deg);
+        }
+    }
+}
+
+.cards{
+    width: 100%;
+    height: 100%;
+    background: var(--color-secondary);
+    transition: transform 1s ease-in-out;
+    transform-style: preserve-3d;
+}
