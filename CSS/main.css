@@ -185,8 +185,9 @@ body {
   height: 100%;
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
-  top: 0;
+  top: -1000rem;
   z-index: 1000;
+  transition: all 1s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -194,6 +195,27 @@ body {
 
 .video {
   border-radius: 20px;
+}
+
+.close-ico {
+  font-size: 3.5rem;
+  background-image: linear-gradient(to bottom right, #0077ff, #00ff62, #46ff17);
+  -ms-background-clip: text;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  cursor: pointer;
+}
+
+.close-ico:hover {
+  background-image: linear-gradient(to bottom right, #0366d8, #03d855, #3fdd17);
+}
+
+.slide-down {
+  top: 0;
 }
 
 .paragraph {
