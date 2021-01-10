@@ -2,6 +2,11 @@ const viewVideoBtn = document.querySelector(".about-container__view-video-btn");
 const videoContainer = document.querySelector(".about-container__video-container");
 const closeVideoContainer = document.querySelector(".close-1");
 
+
+////////////////////////////////////////////////////////////////////////////
+/// NAVBAR
+////////////////////////////////////////////////////////////////////////////
+/// ABOUT SECTION
 viewVideoBtn.addEventListener(`click`, function(){
     videoContainer.classList.add("slide-down")
 })
