@@ -323,6 +323,17 @@
             top: 20rem;
             font-size: 5rem;
         }
+
+        &::before{
+            content: "";
+            width: 60%;
+            height: 35%;
+            position: absolute;
+            background-image:url(../img/bg-svg.png);
+            background-size: cover;
+            top: 1.5rem;
+            left: 1.5rem;
+        }
     }
 
     figure{

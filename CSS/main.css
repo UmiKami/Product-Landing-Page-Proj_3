@@ -332,6 +332,17 @@ body {
   font-size: 5rem;
 }
 
+.card-1__back::before, .card-2__back::before, .card-3__back::before {
+  content: "";
+  width: 60%;
+  height: 35%;
+  position: absolute;
+  background-image: url(../img/bg-svg.png);
+  background-size: cover;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
 .card-1 figure, .card-2 figure, .card-3 figure {
   margin: 0;
   width: 100%;
