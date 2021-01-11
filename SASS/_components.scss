@@ -537,5 +537,58 @@
 /// FOOTER SECTION
 
 .footer-content{
-    
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__logoEtElse{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        line-height: 2;
+    }
+
+    &__logo-png{
+        transform: scale(1.1);
+    }
+
+    &__copyright{
+        font-size: 1.6rem;
+        color: var(--color-secondary);
+        margin-bottom: 2.6rem;
+    }
+
+    &__additional-content{
+        display: flex;
+    }
+
+    &__list{
+        list-style: none;
+        line-height: 4rem;
+        font-size: 1.35rem;
+        text-transform: uppercase;
+    }
+
+    &__list a{
+        color: var(--color-secondary);
+        text-decoration: none;
+    }
+}   
+
+
+////////////////////////////////////////////////////////////
+/// MEDIA QUERY
+
+@media screen and (max-width: 1650px){
+    .about-container{
+        &__header{
+            font-size: 3.5rem;
+        }
+
+        p{
+            font-size: 2rem;
+        }
+    }
 }
