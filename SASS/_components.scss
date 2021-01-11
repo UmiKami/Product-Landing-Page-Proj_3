@@ -110,7 +110,7 @@
     
     &__header{
         color: var(--color-primary);
-        font-size: 5rem;
+        font-size: 4rem;
         letter-spacing: .15rem;
         margin-bottom: 4rem;
     }
@@ -586,18 +586,3 @@
     }
 }   
 
-
-////////////////////////////////////////////////////////////
-/// MEDIA QUERY
-
-@media screen and (max-width: 1650px){
-    .about-container{
-        &__header{
-            font-size: 3.5rem;
-        }
-
-        p{
-            font-size: 2rem;
-        }
-    }
-}

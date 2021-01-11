@@ -136,7 +136,7 @@ footer {
 
 .about-container__header {
   color: var(--color-primary);
-  font-size: 5rem;
+  font-size: 4rem;
   letter-spacing: .15rem;
   margin-bottom: 4rem;
 }
@@ -557,15 +557,6 @@ footer {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1650px) {
-  .about-container__header {
-    font-size: 3.5rem;
-  }
-  .about-container p {
-    font-size: 2rem;
-  }
-}
-
 @keyframes arrowDown {
   0% {
     transform: translateY(0);
@@ -575,6 +566,15 @@ footer {
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1570px) {
+  .about-container__description .about-container__header {
+    font-size: 3.7rem;
+  }
+  .about-container .paragraph {
+    font-size: 2.2rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
