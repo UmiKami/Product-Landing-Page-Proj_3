@@ -4,7 +4,8 @@
     background-image: linear-gradient(to right bottom, var(--color-hero-1), var(--color-hero-2));
 
     position: absolute;
-    overflow-x: hidden;
+    left: -1.7rem;
+    top: 0;
     z-index: -1;
 }
 
@@ -393,81 +394,148 @@
     justify-content: space-evenly;
     align-items: center;
     color: var(--color-primary);
-
+    
     &__image-container{
         width: 30%;
         height: 85%;
         background-image: url("../img/form-img.jpg");
         background-size: cover;
         background-position: center;
-
+        
         border-radius: 3rem;
     }
-
+    
     &__nonDecorArea{
         height: 85%;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         position: relative;
-
+        
     }
-
+    
     &__header{
         font-size: 6rem;
         font-weight: 800;
         width: 30vw;
+        letter-spacing: .3rem;
     }
-
+    
     &__form{
         display: flex;
         flex-direction: column;
-
+        
         position: absolute;
         top: 30%;
     }
-
+    
     &__name-label{
-        font-weight: 500;
+        width: fit-content;
+        
+        font-weight: 600;
         font-size: 3.2rem;
+        letter-spacing: .2rem;
         line-height: 2;
     }
-
+    
     #name{
         width: 45rem;
-        height: 4.5rem;
-        margin-bottom: 4rem;
+        height: 5rem;
+        margin-bottom: 3rem;
         border-radius: 1rem;
-
+        
         font-size: 2.5rem;
+        
+        border: .2rem solid var(--color-primary);
+        color: var(--color-card-gradient-1);
+        
+        outline: none;
     }
-
+    
+    #name:focus{
+        box-shadow: 0 0 3pt 1pt var(--color-primary);
+    }
+    
     &__email-label{
-        font-weight: 500;
+        width: fit-content;
+        
+        font-weight: 600;
         font-size: 3.2rem;
+        letter-spacing: .2rem;
         line-height: 2;
     }
-
+    
     #email{
-        height: 4.5rem;
+        height: 5rem;
         margin-bottom: 4rem;
         border-radius: 1rem;
+        
+        font-size: 2.5rem;
+        
+        border: .2rem solid var(--color-primary);
+        color: var(--color-card-gradient-1);
+        outline: none;
     }
-
-    &__submit-btn{
+    
+    #email:focus{
+        box-shadow: 0 0 3pt 1pt var(--color-primary);
+    }
+    
+    &__submit-btn,
+    &__submit-btn::before{
+        position: relative;
         align-self: center;
-
+        
         margin-top: 3rem;
         border: none;
-        width: 60%;
-        height: 7.5rem;
+        width: 80%;
+        height: 9rem;
         border-radius: 50px;
         
         font-size: 2.9rem;
         font-weight: bold;
-        background: linear-gradient(to bottom right, var(--color-card-btn-gradient-1), var(--color-card-btn-gradient-2));
+        background: linear-gradient(to bottom right, var(--color-button-2), var(--color-card-gradient-1));
         color: #fff;
         
         cursor: pointer;
+        outline: none;
     }
+    
+    &__submit-btn::after{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border-radius: 5rem;
+        background-image: linear-gradient(to bottom right, var(--color-button-2), var(--color-card-gradient-1));
+        
+        transition: all .4s;
+    }
+    
+    &__submit-btn:hover::after{
+        transform: scaleX(1.1) scaleY(1.3);
+        opacity: 0;
+    }
+    
+    &__submit-btn:focus::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        filter: blur(1rem);
+        z-index: -20;
+    }
+}
+
+//////////////////////////////////////////////////////
+/// FOOTER SECTION
+
+.footer-content{
+    
 }
