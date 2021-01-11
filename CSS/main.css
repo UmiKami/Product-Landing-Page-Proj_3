@@ -119,135 +119,15 @@ footer {
   animation: arrowDown 1s infinite;
 }
 
-.about-container {
-  display: flex;
-  height: 100vh;
-  position: relative;
-  overflow-y: hidden;
-  padding: 12rem 0;
-}
-
-.about-container__description {
-  margin-left: 15.5rem;
-  margin-right: 25rem;
-  color: var(--color-primary);
-  font-size: 1.4rem;
-}
-
-.about-container__header {
-  text-transform: capitalize;
-  margin-bottom: 4rem;
-  font-weight: 700;
-  font-size: 4rem;
-}
-
-.about-container__collage {
-  margin-right: 15.5rem;
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-container__photo-1 {
-  width: 62rem;
-  height: 27.8rem;
-  margin-bottom: 2rem;
-  border-radius: 30px;
-}
-
-.about-container__photo-2 {
-  width: 30rem;
-  height: 42.5rem;
-  border-radius: 30px;
-}
-
-.about-container__photo-3 {
-  width: 30rem;
-  height: 42.5rem;
-  margin-left: 2rem;
-  border-radius: 30px;
-}
-
-.about-container__photo-bottom {
-  display: flex;
-}
-
-.about-container__view-video-btn {
-  border: none;
-  padding: 3rem 8rem;
-  background-image: linear-gradient(to bottom right, var(--color-hero-1), var(--color-button-1));
-  border-radius: 50px;
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: var(--color-secondary);
-  outline: none;
-  position: relative;
-  cursor: pointer;
-}
-
-.about-container__view-video-btn:active {
-  transform: translateY(-1.5px);
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
-}
-
-.about-container__view-video-btn::after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-radius: 50px;
-  transition: background-color .4s;
-}
-
-.about-container__view-video-btn:hover::after {
-  background-color: rgba(196, 222, 255, 0.2);
-}
-
-.about-container__video-container {
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  position: absolute;
-  top: -1000rem;
-  z-index: 1000;
-  transition: all .5s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.video {
-  border-radius: 20px;
-}
-
-.close-ico {
-  font-size: 3.5rem;
-  background-image: linear-gradient(to bottom right, #0077ff, #00ff62, #46ff17);
-  -ms-background-clip: text;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
-  cursor: pointer;
-}
-
-.close-ico:hover {
-  background-image: linear-gradient(to bottom right, #0366d8, #03d855, #3fdd17);
-}
-
-.slide-down {
-  top: 0;
-}
-
-.paragraph {
+.about-container .paragraph {
   font-weight: 500;
   font-size: 2.4rem;
   line-height: 2;
   margin-bottom: 3rem;
+}
+
+.slide-down {
+  top: 0;
 }
 
 .pricing-container {
