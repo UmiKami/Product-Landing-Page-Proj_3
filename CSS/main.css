@@ -292,7 +292,6 @@ body {
 
 .card-1__front, .card-2__front, .card-3__front {
   background: var(--color-secondary);
-  transform: rotateY(0deg);
 }
 
 .card-1__front-top, .card-2__front-top, .card-3__front-top {
@@ -354,8 +353,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  -moz-backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .card-1__front-top {
