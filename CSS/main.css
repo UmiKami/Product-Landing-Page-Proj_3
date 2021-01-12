@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 html {
@@ -80,6 +81,10 @@ footer {
 
 .header-container__links:hover {
   background: rgba(0, 0, 0, 0.02);
+}
+
+.header-container .responsive-navbar {
+  display: none;
 }
 
 .home-container {
@@ -617,6 +622,28 @@ footer {
   }
 }
 
+@media screen and (max-width: 1080px) {
+  .header-container {
+    height: 10rem;
+  }
+  .hide {
+    display: none;
+  }
+  #header .responsive-navbar {
+    display: block;
+    margin-right: 8rem;
+    cursor: pointer;
+  }
+  #header .responsive-navbar__icon {
+    font-size: 3rem;
+    background-image: linear-gradient(to top right, #c1d600, #00ac0e);
+    -ms-background-clip: text;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 @media screen and (max-width: 720px) {
   .about-container {
     flex-direction: column;
@@ -624,8 +651,9 @@ footer {
   }
   .about-container__description {
     position: relative;
-    max-width: 90%;
-    left: 2rem;
+    max-width: none;
+    left: 0;
+    width: 80%;
   }
   .about-container__description .about-container__header {
     font-size: 2.5rem;
@@ -635,9 +663,23 @@ footer {
   }
   .about-container__collage {
     position: relative;
-    width: 38%;
-    height: 50%;
-    right: 2rem;
+    width: 90%;
+    height: 25%;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    row-gap: 0;
+  }
+  .about-container__photo-1 {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+  }
+  .about-container__photo-2 {
+    grid-column: 1/2;
+    grid-row: 1/-1;
+  }
+  .about-container__photo-3 {
+    grid-column: 3/4;
+    grid-row: 1/-1;
   }
   .about-container__view-video-btn {
     padding: 2rem 7rem;
