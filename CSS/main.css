@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
 }
 
 html {
@@ -636,33 +635,61 @@ footer {
   }
   #header .responsive-navbar__icon {
     font-size: 3rem;
-    background-image: linear-gradient(to top right, #c1d600, #00ac0e);
+    background-image: linear-gradient(to top right, #dff800, #00ac0e);
     -ms-background-clip: text;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  .home-container {
+    height: 89.65vh;
+  }
+  .home-container__part-1 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 30%;
+  }
+  .home-container__main-header {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 720px) {
+  .home-container__part-1 {
+    bottom: 35%;
+    -webkit-gap: 4rem;
+    gap: 4rem;
+  }
+  .home-container__main-header {
+    font-size: 6rem;
+    width: 80%;
+  }
+  .home-container__bg-img {
+    width: 85%;
+  }
   .about-container {
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
   }
   .about-container__description {
     position: relative;
     max-width: none;
     left: 0;
-    width: 80%;
+    top: 0;
+    width: 90%;
   }
   .about-container__description .about-container__header {
-    font-size: 2.5rem;
+    font-size: 2.9rem;
   }
   .about-container .paragraph {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   .about-container__collage {
     position: relative;
+    right: 0;
+    top: 0;
     width: 90%;
     height: 25%;
     grid-template-rows: 100%;
