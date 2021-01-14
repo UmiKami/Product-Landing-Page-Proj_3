@@ -2,7 +2,7 @@
 const header = document.querySelector(".header-container");
 const homeContainer = document.querySelector(".home-container");
 const homeContainer_Part1 = document.querySelector(".home-container__part-1");
-const navLinks = document.querySelectorAll(".nav-links");
+const navLinks = document.querySelectorAll(".header-container__links");
 
 // About Section
 const viewVideoBtn = document.querySelector(".about-container__view-video-btn");
@@ -26,6 +26,25 @@ window.addEventListener("scroll", function(){
         homeContainer.style.height = "88.6vh";
         homeContainer_Part1.style.bottom = "40%"
     }
+})
+
+// Smooth scroll fix
+navLinks.forEach(function(links){
+    links.addEventListener(`click`, function (e){
+        e.preventDefault();
+
+        // navigate to location
+        const id = e.currentTarget.getAttribute("href").slice(1);
+        const section = document.getElementById(id);
+
+        const headerHeight = header.getBoundingClientRect().height;
+        const isFixed = header.classList.contains("fix-header");
+
+        let position= section.offsetTop - headerHeight;
+        window.scrollTo({
+            left:0, top: position
+        })
+    })
 })
 
 ////////////////////////////////////////////////////////////////////////////
