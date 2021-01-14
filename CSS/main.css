@@ -853,10 +853,16 @@ footer {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    color: var(--color-primary);
+    color: var(--color-secondary);
+    position: relative;
   }
   .form-container__image-container {
-    display: none;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: rgba(0, 0, 0, 0.15);
+    background-blend-mode: color;
+    z-index: -20;
   }
   .form-container__nonDecorArea {
     height: 85%;
@@ -870,6 +876,131 @@ footer {
     font-weight: 800;
     width: 85vw;
     letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .pricing-container__card-container {
+    width: 90%;
+    height: 22rem;
+  }
+  .card-1__front-bottom, .card-2__front-bottom, .card-3__front-bottom {
+    position: absolute;
+    top: 40%;
+  }
+  .card-1__front-bottom-list, .card-2__front-bottom-list, .card-3__front-bottom-list {
+    font-size: 2rem;
+  }
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-secondary);
+  }
+  .form-container__nonDecorArea {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .form-container__header {
+    font-size: 4.2rem;
+    font-weight: 800;
+    width: 100%;
+    letter-spacing: 0.3rem;
+    padding: 0 2.5rem;
+  }
+  .form-container__form {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-container__name-label {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    line-height: 2;
+  }
+  .form-container #name {
+    width: 95%;
+    height: 5rem;
+    margin-bottom: 3rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    font-size: 2.5rem;
+    border: 0.2rem solid var(--color-primary);
+    color: var(--color-card-gradient-1);
+    outline: none;
+  }
+  .form-container #name:focus {
+    box-shadow: 0 0 3pt 1pt var(--color-primary);
+  }
+  .form-container__email-label {
+    width: fit-content;
+    font-weight: 600;
+    font-size: 3.2rem;
+    letter-spacing: 0.2rem;
+    line-height: 2;
+  }
+  .form-container #email {
+    height: 5rem;
+    margin-bottom: 4rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    width: 95%;
+    font-size: 2.5rem;
+    border: 0.2rem solid var(--color-primary);
+    color: var(--color-card-gradient-1);
+    outline: none;
+  }
+  .form-container #email:focus {
+    box-shadow: 0 0 3pt 1pt var(--color-primary);
+  }
+  .form-container__submit-btn, .form-container__submit-btn::before {
+    position: relative;
+    align-self: center;
+    margin-top: 3rem;
+    border: none;
+    width: 75%;
+    height: 8.5rem;
+    border-radius: 50px;
+    font-size: 2.9rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, var(--color-button-2), var(--color-card-gradient-1));
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  .form-container__submit-btn::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 5rem;
+    background-image: linear-gradient(to bottom right, var(--color-button-2), var(--color-card-gradient-1));
+    transition: all 0.4s;
+  }
+  .form-container__submit-btn:hover::after {
+    transform: scaleX(1.1) scaleY(1.3);
+    opacity: 0;
+  }
+  .form-container__submit-btn:focus::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(1rem);
+    z-index: -20;
   }
 }
 
