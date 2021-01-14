@@ -4,7 +4,7 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 
 # Known Issues
 
-* Page does not accomadate well to phone screens. Result of innacurate device toolbar outputs.
+* Page does not accomadate well to phone screens. Result of innacurate device toolbar outputs. - [01/14/2021] Fixed, reduced the height on the device devtools to make it look like on a real phone and proceeded from there
 - Page is not fully responsive vertically. 
   - Works in windowed mode for macbook 13"
   - Further testing in other devices needed.
@@ -13,6 +13,6 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 
 # What's next?
 
-1. Finish media queries
+1. Finish media queries - [90%]
 2. Make the navbar fix on scroll
 3. Create second navbar for mobile devices
