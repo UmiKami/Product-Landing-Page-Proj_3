@@ -1,0 +1,18 @@
+# Product-Landing-Page-Proj_3
+
+Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-product-landing-page
+
+# Known Issues
+
+* Page does not accomadate well to phone screens. Result of innacurate device toolbar outputs.
+- Page is not fully responsive vertically. 
+  - Works in windowed mode for macbook 13"
+  - Further testing in other devices needed.
+* Footer not yet fully responsive. 
+* Flip cards not working on safari web browser regardless multiple attempts to fix it.
+
+# What's next?
+
+1. Finish media queries
+2. Make the navbar fix on scroll
+3. Create second navbar for mobile devices
