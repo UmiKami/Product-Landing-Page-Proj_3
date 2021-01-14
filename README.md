@@ -6,8 +6,8 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 
 * Page does not accomadate well to phone screens. Result of innacurate device toolbar outputs.
 - Page is not fully responsive vertically. 
-      - Works in windowed mode for macbook 13"
-      - Further testing in other devices needed.
+  - Works in windowed mode for macbook 13"
+  - Further testing in other devices needed.
 * Footer not yet fully responsive. 
 * Flip cards not working on safari web browser regardless multiple attempts to fix it.
 
