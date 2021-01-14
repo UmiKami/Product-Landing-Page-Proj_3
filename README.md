@@ -14,6 +14,6 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 # What's next?
 
 1. Finish media queries - [98%]
-2. Make the navbar fix on scroll - [Started]
+2. Make the navbar fix on scroll - [Finished]
 3. Create second navbar for mobile devices
 4. Set up smooth scrolling and navbars fucntionality

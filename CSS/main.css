@@ -85,6 +85,18 @@ footer {
   display: none;
 }
 
+.fix-header {
+  transition: all .4s;
+  z-index: 10000;
+  width: 100vw;
+  position: fixed;
+  background: var(--color-primary);
+}
+
+.fix-header .nav-link:hover {
+  background: #38364d;
+}
+
 .home-container {
   height: 88.6vh;
   display: flex;

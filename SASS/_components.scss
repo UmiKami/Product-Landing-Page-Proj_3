@@ -54,6 +54,20 @@
     }
 }
 
+.fix-header{
+    transition: all .4s;
+    z-index: 10000;
+    width: 100vw;
+    position: fixed;
+    background: var(--color-primary);
+
+    & .nav-link{
+        &:hover{
+            background: lighten($color:#2F2E41, $amount: 4);
+        }
+    }
+}
+
 //////////////////////////////////////////////////////
 /// MOBILE NAVBAR SECTION
 
