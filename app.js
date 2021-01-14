@@ -1,6 +1,8 @@
-// Nav bar
+// Nav bar & Home
 const header = document.querySelector(".header-container");
 const homeContainer = document.querySelector(".home-container");
+const homeContainer_Part1 = document.querySelector(".home-container__part-1");
+const navLinks = document.querySelectorAll(".nav-links");
 
 // About Section
 const viewVideoBtn = document.querySelector(".about-container__view-video-btn");
@@ -18,7 +20,11 @@ window.addEventListener("scroll", function(){
     header.classList.toggle("fix-header", window.scrollY > header.clientHeight)
 
     if(header.classList.contains("fix-header")){
-        console.log(homeContainer.style.height = "100vh");
+        homeContainer.style.height = "100vh";
+        homeContainer_Part1.style.bottom = "36%"
+    }else{
+        homeContainer.style.height = "88.6vh";
+        homeContainer_Part1.style.bottom = "40%"
     }
 })
 

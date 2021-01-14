@@ -54,6 +54,7 @@
     }
 }
 
+
 .fix-header{
     transition: all .4s;
     z-index: 10000;
@@ -103,7 +104,7 @@
     &__part-2{
         transform: scale(0.8) rotate(180deg);
         position: absolute;
-        bottom: 5%;
+        bottom: 5%; 
 
         #triangle-3, #triangle-4{
             display: none;
