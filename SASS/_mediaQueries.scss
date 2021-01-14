@@ -415,8 +415,45 @@
 }
 
 @media screen and (max-width: 450px) {
-  
-  
+    //////////////////////////////////////////////////////
+  /// HEADER/NAVBAR SECTION
+
+  .header-container {
+    align-items: center;
+
+    &__logo-box{
+      margin-left: 2rem;
+    }
+  }
+
+  #header .responsive-navbar{
+    margin-right: 2rem;
+  }
+
+  #header-img{
+    height: 3.5rem;
+  }
+
+    //////////////////////////////////////////////////////
+  /// HOME CONTAINER
+  .home-container {
+
+    &__part-1 {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      bottom: 30%;
+    }
+
+    &__main-header{
+      font-size: 4.9rem;
+    }
+
+    &__bg-img{
+      width: 70%;
+    }
+  }
+
    //////////////////////////////////////////////////////
   /// ABOUT SECTION
   .about-container {
@@ -583,6 +620,13 @@
     #email:focus {
       box-shadow: 0 0 3pt 1pt var(--color-primary);
     }
+  }
+
+  //////////////////////////////////////////////////////
+/// FOOTER SECTION
+
+   .footer-content{
+  height: 95%;
   }
 }
 
