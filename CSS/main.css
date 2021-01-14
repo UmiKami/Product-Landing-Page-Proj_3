@@ -136,6 +136,7 @@ footer {
   position: absolute;
   justify-content: flex-start;
   top: 7rem;
+  bottom: 0;
   left: 15.5rem;
 }
 
@@ -227,7 +228,7 @@ footer {
   background: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: -1000rem;
-  z-index: 1000;
+  z-index: 10000;
   transition: all .5s;
   display: flex;
   align-items: center;
@@ -323,12 +324,12 @@ footer {
   align-items: center;
 }
 
-.card-1__bottom, .card-2__bottom, .card-3__bottom {
+.card-1__front-bottom, .card-2__front-bottom, .card-3__front-bottom {
   position: absolute;
   top: 50%;
 }
 
-.card-1__bottom-list, .card-2__bottom-list, .card-3__bottom-list {
+.card-1__front-bottom-list, .card-2__front-bottom-list, .card-3__front-bottom-list {
   color: var(--color-primary);
   font-size: 3.5rem;
   font-weight: 600;
@@ -412,22 +413,20 @@ footer {
   height: 85%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+  justify-content: space-evenly;
+  align-items: flex-start;
 }
 
 .form-container__header {
   font-size: 6rem;
   font-weight: 800;
-  width: 30vw;
+  width: 32vw;
   letter-spacing: .3rem;
 }
 
 .form-container__form {
   display: flex;
   flex-direction: column;
-  position: absolute;
-  top: 30%;
 }
 
 .form-container__name-label {
@@ -443,6 +442,7 @@ footer {
   height: 5rem;
   margin-bottom: 3rem;
   border-radius: 1rem;
+  padding: 0 1rem;
   font-size: 2.5rem;
   border: 0.2rem solid var(--color-primary);
   color: var(--color-card-gradient-1);
@@ -465,6 +465,8 @@ footer {
   height: 5rem;
   margin-bottom: 4rem;
   border-radius: 1rem;
+  padding: 0 1rem;
+  width: 45rem;
   font-size: 2.5rem;
   border: 0.2rem solid var(--color-primary);
   color: var(--color-card-gradient-1);
@@ -480,8 +482,8 @@ footer {
   align-self: center;
   margin-top: 3rem;
   border: none;
-  width: 80%;
-  height: 9rem;
+  width: 75%;
+  height: 8.5rem;
   border-radius: 50px;
   font-size: 2.9rem;
   font-weight: bold;
@@ -560,6 +562,10 @@ footer {
 .footer-content__list a {
   color: var(--color-secondary);
   text-decoration: none;
+}
+
+.hide-card-text {
+  display: none;
 }
 
 @keyframes arrowDown {
@@ -711,6 +717,175 @@ footer {
   .about-container__view-video-btn {
     padding: 2rem 7rem;
     font-size: 1.8rem;
+    font-weight: 600;
+  }
+  .pricing-container {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .pricing-container__card-container {
+    width: 90%;
+    height: 30rem;
+  }
+  .pricing-container__btn {
+    margin-top: 3rem;
+    border: none;
+    width: 15rem;
+    height: 5rem;
+    border-radius: 50px;
+    font-size: 2.7rem;
+    font-weight: bold;
+    background: linear-gradient(to bottom right, var(--color-card-btn-gradient-1), var(--color-card-btn-gradient-2));
+    color: #fff;
+    position: absolute;
+    bottom: 4rem;
+    z-index: 100;
+    cursor: pointer;
+  }
+  .card-1,
+  .card-2,
+  .card-3 {
+    position: relative;
+  }
+  .card-1__front,
+  .card-2__front,
+  .card-3__front {
+    background: var(--color-secondary);
+  }
+  .card-1__front-top,
+  .card-2__front-top,
+  .card-3__front-top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35%;
+    border-radius: 20px 20px 0 0;
+    font-size: 2.7rem;
+    color: var(--color-secondary);
+    background: rgba(0, 0, 0, 0.25);
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card-1__front-bottom,
+  .card-2__front-bottom,
+  .card-3__front-bottom {
+    position: absolute;
+    top: 45%;
+  }
+  .card-1__front-bottom-list,
+  .card-2__front-bottom-list,
+  .card-3__front-bottom-list {
+    color: var(--color-primary);
+    font-size: 2.4rem;
+    font-weight: 600;
+    list-style: none;
+  }
+  .card-1__back,
+  .card-2__back,
+  .card-3__back {
+    background: linear-gradient(to bottom right, var(--color-card-gradient-1), var(--color-card-gradient-2));
+    color: var(--color-secondary);
+    transform: rotateY(180deg);
+  }
+  .card-1__back h1,
+  .card-2__back h1,
+  .card-3__back h1 {
+    position: absolute;
+    top: 8rem;
+    font-size: 5rem;
+  }
+  .card-1__back::before,
+  .card-2__back::before,
+  .card-3__back::before {
+    content: "";
+    width: 80%;
+    height: 95%;
+    position: absolute;
+    background-image: url(../img/bg-svg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+  .card-1 figure,
+  .card-2 figure,
+  .card-3 figure {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    backface-visibility: hidden;
+  }
+  .card-1__front-top {
+    background-image: url("../img/card-1-photo.jpg");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    background-size: cover;
+    background-position: center;
+  }
+  .card-2__front-top {
+    background-image: url("../img/card-2-photo.jpg");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    background-size: cover;
+    background-position: center;
+  }
+  .card-3__front-top {
+    background-image: url("../img/card-3-photo.jpg");
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+    background-size: cover;
+    background-position-y: 10%;
+  }
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-primary);
+  }
+  .form-container__image-container {
+    display: none;
+  }
+  .form-container__nonDecorArea {
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+  .form-container__header {
+    font-size: 6rem;
+    font-weight: 800;
+    width: 85vw;
+    letter-spacing: 0.3rem;
+  }
+}
+
+@media screen and (max-height: 730px) {
+  .about-container__description .about-container__header {
+    font-size: 3rem;
+  }
+  .about-container__description .about-container__header {
+    font-size: 3rem;
+  }
+  .about-container .paragraph {
+    font-size: 1.95rem;
+  }
+  .about-container__view-video-btn {
+    padding: 2.5rem 5.5rem;
+    font-size: 1.9rem;
     font-weight: 600;
   }
 }

@@ -110,6 +110,7 @@
         position: absolute;
         justify-content: flex-start;
         top: 7rem;
+        bottom: 0;
         left: 15.5rem;
     }
     
@@ -206,7 +207,7 @@
         background: rgba($color: #000000, $alpha: .5);
         position: absolute;
         top: -1000rem;
-        z-index: 1000;
+        z-index: 10000;
         transition: all .5s;
 
         display: flex;
@@ -260,7 +261,7 @@
         height: 65rem;
         
         &:hover .cards{
-            transform: rotateY(180deg);
+            transform: rotateY(180deg);   
         }
     }
     
@@ -318,7 +319,7 @@
         }
     }
     
-    &__bottom{
+    &__front-bottom{
         position: absolute;
         top: 50%;
         
@@ -327,6 +328,7 @@
             font-size: 3.5rem;
             font-weight: 600;
             list-style: none;
+
         }
     }
     &__back{
@@ -424,15 +426,15 @@
         height: 85%;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
-        position: relative;
+        justify-content: space-evenly;
+        align-items: flex-start;
         
     }
     
     &__header{
         font-size: 6rem;
         font-weight: 800;
-        width: 30vw;
+        width: 32vw;
         letter-spacing: .3rem;
     }
     
@@ -440,8 +442,6 @@
         display: flex;
         flex-direction: column;
         
-        position: absolute;
-        top: 30%;
     }
     
     &__name-label{
@@ -458,6 +458,7 @@
         height: 5rem;
         margin-bottom: 3rem;
         border-radius: 1rem;
+        padding: 0 1rem;
         
         font-size: 2.5rem;
         
@@ -484,6 +485,8 @@
         height: 5rem;
         margin-bottom: 4rem;
         border-radius: 1rem;
+        padding: 0 1rem;
+        width: 45rem;
         
         font-size: 2.5rem;
         
@@ -503,8 +506,8 @@
         
         margin-top: 3rem;
         border: none;
-        width: 80%;
-        height: 9rem;
+        width: 75%;
+        height: 8.5rem;
         border-radius: 50px;
         
         font-size: 2.9rem;
@@ -592,3 +595,9 @@
     }
 }   
 
+///////////////////////////////////////////////////////
+// HIDE CLASS
+
+.hide-card-text{
+    display: none;
+}

@@ -1,3 +1,6 @@
+//////////////////////////////////////////////////////
+/// Width
+
 @media screen and (max-width: 1570px) {
   //////////////////////////////////////////////////////
   /// ABOUT SECTION
@@ -72,7 +75,7 @@
   //////////////////////////////////////////////////////
   /// HEADER/NAVBAR SECTION
 
-  .header-container{
+  .header-container {
     height: 10rem;
   }
 
@@ -80,12 +83,12 @@
     display: none;
   }
 
-  #header .responsive-navbar{
+  #header .responsive-navbar {
     display: block;
     margin-right: 8rem;
     cursor: pointer;
 
-    &__icon{
+    &__icon {
       font-size: 3rem;
       background-image: linear-gradient(to top right, #dff800, #00ac0e);
       -ms-background-clip: text;
@@ -101,37 +104,35 @@
   .home-container {
     height: 89.65vh;
 
-    &__part-1{
+    &__part-1 {
       flex-direction: column;
       justify-content: center;
       align-items: center;
       bottom: 30%;
     }
 
-    &__main-header{
+    &__main-header {
       text-align: center;
     }
   }
 }
 
-
 @media screen and (max-width: 720px) {
   ///////////////////////////////////////////////////////
   /// HOME CONTAINER
   .home-container {
-
-    &__part-1{
+    &__part-1 {
       bottom: 35%;
       -webkit-gap: 4rem;
       gap: 4rem;
     }
 
-    &__main-header{
+    &__main-header {
       font-size: 6rem;
       width: 80%;
     }
 
-    &__bg-img{
+    &__bg-img {
       width: 85%;
     }
   }
@@ -158,7 +159,6 @@
     & .paragraph {
       font-size: 1.8rem;
     }
-
 
     // Specificity issue occurring, check media queries above this one and override those values here:
     &__collage {
@@ -189,6 +189,212 @@
     &__view-video-btn {
       padding: 2rem 7rem;
       font-size: 1.8rem;
+      font-weight: 600;
+    }
+  }
+
+  //////////////////////////////////////////////////////
+  /// PRICING SECTION
+
+  .pricing-container {
+    width: 100%;
+    height: 100vh;
+    background: var(--color-primary);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    &__card-container {
+      width: 90%;
+      height: 30rem;
+    }
+
+    &__btn {
+      margin-top: 3rem;
+      border: none;
+      width: 15rem;
+      height: 5rem;
+      border-radius: 50px;
+
+      font-size: 2.7rem;
+      font-weight: bold;
+      background: linear-gradient(to bottom right, var(--color-card-btn-gradient-1), var(--color-card-btn-gradient-2));
+      color: #fff;
+
+      position: absolute;
+      bottom: 4rem;
+      z-index: 100;
+      cursor: pointer;
+    }
+  }
+
+  .card-1,
+  .card-2,
+  .card-3 {
+    position: relative;
+
+    &__front {
+      background: var(--color-secondary);
+      // transform: rotateY(0deg);
+
+      &-top {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 35%;
+        border-radius: 20px 20px 0 0;
+
+        font-size: 2.7rem;
+        color: var(--color-secondary);
+        background: rgba($color: #000000, $alpha: 0.25);
+        background-blend-mode: multiply;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    &__front-bottom {
+      position: absolute;
+      top: 45%;
+
+      &-list {
+        color: var(--color-primary);
+        font-size: 2.4rem;
+        font-weight: 600;
+        list-style: none;
+      }
+    }
+    &__back {
+      background: linear-gradient(to bottom right, var(--color-card-gradient-1), var(--color-card-gradient-2));
+      color: var(--color-secondary);
+      transform: rotateY(180deg);
+
+      & h1 {
+        position: absolute;
+        top: 8rem;
+        font-size: 5rem;
+      }
+
+      &::before {
+        content: "";
+        width: 80%;
+        height: 95%;
+        position: absolute;
+        background-image: url(../img/bg-svg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        top: 1.5rem;
+        left: 1.5rem;
+      }
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      border: none;
+      position: absolute;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      -moz-backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+
+  .card-1 {
+    &__front {
+      &-top {
+        background-image: url("../img/card-1-photo.jpg");
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .card-2 {
+    &__front {
+      &-top {
+        background-image: url("../img/card-2-photo.jpg");
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+        background-size: cover;
+        background-position: center;
+      }
+    }
+  }
+  .card-3 {
+    &__front {
+      &-top {
+        background-image: url("../img/card-3-photo.jpg");
+        clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
+        background-size: cover;
+        background-position-y: 10%;
+      }
+    }
+  }
+
+  //////////////////////////////////////////////////////
+  /// CONTACT SECTION
+
+  .form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--color-primary);
+
+    &__image-container {
+      display: none;
+    }
+
+    &__nonDecorArea {
+      height: 85%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start;
+    }
+
+    &__header {
+      font-size: 6rem;
+      font-weight: 800;
+      width: 85vw;
+      letter-spacing: 0.3rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+/// HEIGHT MEDIA QUERIES
+
+@media screen and (max-height: 730px) {
+  //////////////////////////////////////////////////////
+  /// ABOUT SECTION
+  .about-container {
+    &__description &__header {
+      font-size: 3rem;
+    }
+
+    &__description &__header {
+      font-size: 3rem;
+    }
+
+    & .paragraph {
+      font-size: 1.95rem;
+    }
+    &__view-video-btn {
+      padding: 2.5rem 5.5rem;
+      font-size: 1.9rem;
       font-weight: 600;
     }
   }
