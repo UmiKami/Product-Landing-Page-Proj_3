@@ -79,7 +79,7 @@ footer {
 }
 
 .header-container__links:hover {
-  background: rgba(0, 0, 0, 0.02);
+  color: #20a051;
 }
 
 .header-container .responsive-navbar {
