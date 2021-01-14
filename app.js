@@ -6,7 +6,7 @@ const cardContainer = document.querySelectorAll(".pricing-container__card-contai
 const cardList = document.querySelectorAll(".card-list");
 
 ////////////////////////////////////////////////////////////////////////////
-/// NAVBAR
+/// NAVBAR SECTION
 ////////////////////////////////////////////////////////////////////////////
 /// ABOUT SECTION
 viewVideoBtn.addEventListener(`click`, function(){
@@ -17,8 +17,8 @@ closeVideoContainer.addEventListener(`click`, function(){
     videoContainer.classList.remove("slide-down");
 })
 
-// Iterate through the all the containers with the same class, aka, all the cards
-
+////////////////////////////////////////////////////////////////////////////
+/// PRICING SECTION
 cardContainer.forEach(function(card){
     card.addEventListener(`mouseenter`, function(eC){
         cardList.forEach(function(eL){

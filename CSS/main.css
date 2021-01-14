@@ -38,7 +38,6 @@ footer {
   height: 100vh;
   background-image: linear-gradient(to right bottom, var(--color-hero-1), var(--color-hero-2));
   position: absolute;
-  left: -1.7rem;
   top: 0;
   z-index: -1;
 }
