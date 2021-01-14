@@ -76,7 +76,7 @@
   /// HEADER/NAVBAR SECTION
 
   .header-container {
-    height: 10rem;
+    height: calc(100vh - 89.65vh);
   }
 
   .hide {
@@ -388,7 +388,93 @@
   }
 }
 
+
+//////////////////////////////////////////////////////
+/// HEIGHT MEDIA QUERY
+@media screen and (max-height: 730px) {
+  //////////////////////////////////////////////////////
+  /// ABOUT SECTION
+  .about-container {
+    &__description &__header {
+      font-size: 3rem;
+    }
+
+    &__description &__header {
+      font-size: 3rem;
+    }
+
+    & .paragraph {
+      font-size: 1.95rem;
+    }
+    &__view-video-btn {
+      padding: 2.5rem 5.5rem;
+      font-size: 1.9rem;
+      font-weight: 600;
+    }
+  }
+}
+
 @media screen and (max-width: 450px) {
+  
+  
+   //////////////////////////////////////////////////////
+  /// ABOUT SECTION
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &__description {
+      position: relative;
+      max-width: none;
+      left: 0;
+      top: 0;
+      width: 95%;
+      height: fit-content;
+    }
+
+    &__description &__header {
+      font-size: 2rem;
+    }
+
+    & .paragraph {
+      font-size: 1.3rem;
+    }
+
+    // Specificity issue occurring, check media queries above this one and override those values here:
+    &__collage {
+      position: relative;
+      right: 0;
+      top: 0;
+      width: 90%;
+      height: 25%;
+
+      grid-template-rows: 100%;
+      grid-template-columns: 1fr 2fr 1fr;
+      row-gap: 0;
+    }
+
+    &__photo-1 {
+      grid-column: 2/3;
+      grid-row: 1/-1;
+    }
+    &__photo-2 {
+      grid-column: 1/2;
+      grid-row: 1/-1;
+    }
+    &__photo-3 {
+      grid-column: 3/4;
+      grid-row: 1/-1;
+    }
+
+    &__view-video-btn {
+      padding: 1.5rem 4rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transform: translateX(0);
+    }
+  }
+  
   //////////////////////////////////////////////////////
   /// PRICING SECTION
   .pricing-container {
@@ -497,90 +583,8 @@
     #email:focus {
       box-shadow: 0 0 3pt 1pt var(--color-primary);
     }
-
-    &__submit-btn,
-    &__submit-btn::before {
-      position: relative;
-      align-self: center;
-
-      margin-top: 3rem;
-      border: none;
-      width: 75%;
-      height: 8.5rem;
-      border-radius: 50px;
-
-      font-size: 2.9rem;
-      font-weight: bold;
-      background: linear-gradient(
-        to bottom right,
-        var(--color-button-2),
-        var(--color-card-gradient-1)
-      );
-      color: #fff;
-
-      cursor: pointer;
-      outline: none;
-    }
-
-    &__submit-btn::after {
-      content: "";
-      position: absolute;
-      display: inline-block;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      border-radius: 5rem;
-      background-image: linear-gradient(
-        to bottom right,
-        var(--color-button-2),
-        var(--color-card-gradient-1)
-      );
-
-      transition: all 0.4s;
-    }
-
-    &__submit-btn:hover::after {
-      transform: scaleX(1.1) scaleY(1.3);
-      opacity: 0;
-    }
-
-    &__submit-btn:focus::before {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      filter: blur(1rem);
-      z-index: -20;
-    }
   }
 }
 
-//////////////////////////////////////////////////////
-/// HEIGHT MEDIA QUERIES
 
-@media screen and (max-height: 730px) {
-  //////////////////////////////////////////////////////
-  /// ABOUT SECTION
-  .about-container {
-    &__description &__header {
-      font-size: 3rem;
-    }
 
-    &__description &__header {
-      font-size: 3rem;
-    }
-
-    & .paragraph {
-      font-size: 1.95rem;
-    }
-    &__view-video-btn {
-      padding: 2.5rem 5.5rem;
-      font-size: 1.9rem;
-      font-weight: 600;
-    }
-  }
-}
