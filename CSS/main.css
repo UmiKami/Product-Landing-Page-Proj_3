@@ -88,7 +88,7 @@ footer {
 
 .fix-header {
   transition: all .4s;
-  z-index: 10000;
+  z-index: 99999;
   width: 100vw;
   position: fixed;
   background: var(--color-primary);
