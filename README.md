@@ -8,8 +8,9 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 - Page is not fully responsive vertically. 
   - Works in windowed mode for macbook 13"
   - Further testing in other devices needed.
-* Footer not yet fully responsive. 
-* Flip cards not working on safari web browser regardless multiple attempts to fix it.
+* Footer not yet fully responsive. [01/16/2021] Fixed
+- Flip cards not working on safari web browser regardless multiple attempts to fix it.
+  - Does not work on phones neither.
 
 # What's next?
 
