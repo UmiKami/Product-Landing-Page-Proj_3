@@ -4,6 +4,10 @@ const homeContainer = document.querySelector(".home-container");
 const homeContainer_Part1 = document.querySelector(".home-container__part-1");
 const navLinks = document.querySelectorAll(".header-container__links");
 
+    // mobile nav
+const responsiveNavBtn = document.querySelector(".responsive-navbar")
+const mobileNav = document.querySelector(".mobile-nav")
+
 // About Section
 const viewVideoBtn = document.querySelector(".about-container__view-video-btn");
 const videoContainer = document.querySelector(".about-container__video-container");
@@ -28,6 +32,8 @@ window.addEventListener("scroll", function(){
         homeContainer_Part1.style.bottom = "40%"
     }
 })
+
+
 
 // Smooth scroll fix
 navLinks.forEach(function(links){
