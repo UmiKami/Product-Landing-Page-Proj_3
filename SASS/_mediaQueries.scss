@@ -85,7 +85,9 @@
 
   #header .responsive-navbar {
     display: block;
-    margin-right: 8rem;
+    position: fixed;
+    z-index: 9999999;
+    right: 2rem;
     cursor: pointer;
 
     &__icon {
@@ -107,13 +109,12 @@
     z-index: 90000;
     position: fixed;
     background: var(--color-primary);
-    height: .5%;
+    height: fit-content;
     width: 1%;
     overflow: hidden;
 
-    transition: 
-                width 1s,
-                height 1s 1s;
+    transition:  width .5s;
+
 
     &__links-container{
       display: flex;
@@ -482,10 +483,6 @@
     }
   }
 
-  #header .responsive-navbar {
-    margin-right: 2rem;
-  }
-
   #header-img {
     height: 3.5rem;
   }
@@ -727,7 +724,6 @@
   overflow: visible;
   right: 0;
   width: 100%;
-  height: fit-content;
 }
 
 .hide-card-text{

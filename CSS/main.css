@@ -98,10 +98,6 @@ footer {
   background: var(--color-primary);
 }
 
-.fix-header .nav-link:hover {
-  background: #38364d;
-}
-
 .home-container {
   height: 88.6vh;
   display: flex;
@@ -614,7 +610,9 @@ footer {
   }
   #header .responsive-navbar {
     display: block;
-    margin-right: 8rem;
+    position: fixed;
+    z-index: 9999999;
+    right: 2rem;
     cursor: pointer;
   }
   #header .responsive-navbar__icon {
@@ -633,10 +631,10 @@ footer {
     z-index: 90000;
     position: fixed;
     background: var(--color-primary);
-    height: .5%;
+    height: fit-content;
     width: 1%;
     overflow: hidden;
-    transition: width 1s, height 1s 1s;
+    transition: width .5s;
   }
   .mobile-nav__links-container {
     display: flex;
@@ -930,9 +928,6 @@ footer {
   .header-container__logo-box {
     margin-left: 2rem;
   }
-  #header .responsive-navbar {
-    margin-right: 2rem;
-  }
   #header-img {
     height: 3.5rem;
   }
@@ -1115,7 +1110,6 @@ footer {
   overflow: visible;
   right: 0;
   width: 100%;
-  height: fit-content;
 }
 
 .hide-card-text {

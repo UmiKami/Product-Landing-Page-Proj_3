@@ -41,28 +41,37 @@ window.addEventListener("scroll", function () {
     }
 });
 
+
+// Remove class on resize
+window.addEventListener("resize", function () {
+    if(window.innerWidth > 1080){
+        mobileNav.classList.remove("show-mobile-nav");
+    }
+})
+
 // mobile nav
 mobileNavLinks.forEach(function (links) {
     links.addEventListener(`click`, function (e) {
+      mobileNav.classList.remove("show-mobile-nav");
       e.preventDefault();
+
       // navigate to location
       const id = e.currentTarget.getAttribute("href").slice(1);
       const section = document.getElementById(id);
   
-      const navHeight = mobileNav.getBoundingClientRect().height;
+      const headerHeight = header.getBoundingClientRect().height;
+      const isFixed = header.classList.contains("fix-header");
   
-      let position = section.offsetTop - navHeight;
+      let position = section.offsetTop - headerHeight;
       window.scrollTo({
         left: 0,
-        top: position,
+        top: position + 10,
       });
     });
   });
 
-responsiveNavBtn.addEventListener(`click`, function (btn) {
-  btn.currentTarget.classList.add("hide-btn");
-  // mobileNav.classList.remove("hide-btn");
-  mobileNav.classList.add("show-mobile-nav");
+responsiveNavBtn.addEventListener(`click`, function () {
+  mobileNav.classList.toggle("show-mobile-nav");
 });
 
 // Smooth scroll fix
