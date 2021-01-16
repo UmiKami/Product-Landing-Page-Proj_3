@@ -52,6 +52,10 @@
     .responsive-navbar{
         display: none;
     }
+
+    .mobile-nav{
+        display: none;
+    }
 }
 
 
@@ -582,17 +586,3 @@
     }
 }   
 
-///////////////////////////////////////////////////////
-// HIDE/SHOW CLASSES
-
-.hide-mobile-nav{
-    display: none;
-}
-
-.hide-card-text{
-    display: none;
-}
-
-.slide-down{
-    top: 0 !important;
-}
