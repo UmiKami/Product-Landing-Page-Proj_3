@@ -56,7 +56,7 @@
 
 
 .fix-header{
-    transition: all .4s;
+    transition: all .2s;
     z-index: 99999;
     width: 100vw;
     position: fixed;
@@ -535,37 +535,6 @@
         
         cursor: pointer;
         outline: none;
-    }
-    
-    &__submit-btn::after{
-        content: "";
-        position: absolute;
-        display: inline-block;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        border-radius: 5rem;
-        background-image: linear-gradient(to bottom right, var(--color-button-2), var(--color-card-gradient-1));
-        
-        transition: all .4s;
-    }
-    
-    &__submit-btn:hover::after{
-        transform: scaleX(1.1) scaleY(1.3);
-        opacity: 0;
-    }
-    
-    &__submit-btn:focus::before{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        filter: blur(1rem);
-        z-index: -20;
     }
 }
 

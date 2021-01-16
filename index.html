@@ -99,8 +99,8 @@
                 <div class="about-container__photo-3"></div>
             </div>
 
-            <div id="video" class="about-container__video-container">
-                <iframe width="1280" height="720" src="https://www.youtube.com/embed/-NftQMvEmsw?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video"></iframe>
+            <div class="about-container__video-container">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/-NftQMvEmsw?rel=0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video" id="video"></iframe>
                 <div class="close-ico close-1">
                     <i class="fas fa-times-circle close-1" aria-hidden="true"></i>
                 </div>
@@ -191,8 +191,8 @@
                     <label for="name" class="form-container__name-label">Name</label>
                     <input type="text" id="name">
                     <label for="email" class="form-container__email-label">Email</label>
-                    <input type="email" id="email">
-                    <button type="button" class="form-container__submit-btn">SUBMIT</button>
+                    <input type="email" id="email" >
+                    <input id="submit" type="submit" class="form-container__submit-btn" value="SUBMIT">
                 </form>
             </div>
         </div>
@@ -219,6 +219,6 @@
 
     <!-- Scripts -->
     <script src="./app.js"></script>
-    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>

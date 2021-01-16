@@ -13,6 +13,7 @@ const closeVideoContainer = document.querySelector(".close-1");
 const cardContainer = document.querySelectorAll(".pricing-container__card-container");
 const cardList = document.querySelectorAll(".card-list");
 
+
 ////////////////////////////////////////////////////////////////////////////
 /// NAVBAR SECTION
 
