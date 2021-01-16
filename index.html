@@ -15,7 +15,7 @@
     <header>
         <div class="header-container" id="header">
             <div class="header-container__logo-box">
-                <a href="#home"><img src="./img/logo.png" alt="logo" class="header-container__logo-png" id="header-img"></a>
+                <img src="./img/logo.png" alt="logo" class="header-container__logo-png" id="header-img">
             </div>
 
             <!-- desktop navbar -->
@@ -212,11 +212,11 @@
 
             <div class="form-container__nonDecorArea">
                 <h1 class="form-container__header">Want to know more?</h1>
-                <form action="get" id="form" class="form-container__form">
+                <form action="https://www.freecodecamp.com/email-submit" id="form" class="form-container__form">
                     <label for="name" class="form-container__name-label">Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" placeholder="Enter your full name here...">
                     <label for="email" class="form-container__email-label">Email</label>
-                    <input type="email" id="email" >
+                    <input type="email" id="email" name= "email" required placeholder="Enter your email here...">
                     <input id="submit" type="submit" class="form-container__submit-btn" value="SUBMIT">
                 </form>
             </div>
