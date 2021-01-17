@@ -11,6 +11,7 @@ Freecodecamp project/challenge: https://www.freecodecamp.org/learn/responsive-we
 * Footer not yet fully responsive. [01/16/2021] Fixed
 - Flip cards not working on safari web browser regardless multiple attempts to fix it.
   - Does not work on phones neither.
+- Some elements overflow each other at zoom
 
 # What's next?
 

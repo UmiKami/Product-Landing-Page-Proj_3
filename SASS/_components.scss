@@ -116,9 +116,11 @@
     width: 100%;
     display: flex;
     position: relative;
+    overflow: hidden;
     
     &__description{
         max-width: 38%;
+        max-height: 90%;
         position: absolute;
         justify-content: flex-start;
         top: 7rem;
@@ -267,8 +269,8 @@
     align-items: center;
     
     &__card-container{
-        width: 45rem;
-        height: 65rem;
+        width: 28%;
+        height: 75%;
         
         &:hover .cards{
             transform: rotateY(180deg);   
@@ -509,15 +511,14 @@
         box-shadow: 0 0 3pt 1pt var(--color-primary);
     }
     
-    &__submit-btn,
-    &__submit-btn::before{
+    &__submit-btn{
         position: relative;
         align-self: center;
         
         margin-top: 3rem;
         border: none;
         width: 75%;
-        height: 8.5rem;
+        height: 100%;
         border-radius: 50px;
         
         font-size: 2.9rem;
@@ -539,11 +540,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     &__logoEtElse{
+        height: 95%;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        position: absolute;
+        top: 20%;
         line-height: 2;
     }
 
