@@ -112,20 +112,18 @@
 /// ABOUT SECTION
 
 .about-container{
-    height: 100vh;
+    height: auto;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0rem 12%;
+    padding: 6rem 2rem;
     position: relative;
-    overflow: hidden;
     
     &__description{
-        max-width: 38%;
+        max-width: 40%;
         max-height: 90%;
-        position: absolute;
-        justify-content: flex-start;
-        top: 7rem;
-        bottom: 0;
-        left: 15.5rem;
     }
     
     &__header{
@@ -143,17 +141,12 @@
     }
 
     &__collage{
-        width: 35%;
-        height: 80%;
+        width: 50rem;
+        height: 67rem;
         display: grid;
         grid-template-rows: 40% auto;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
-
-
-        position: absolute;
-        right: 15.5rem;
-        top: 7rem;
     }
 
     &__photo-1{
@@ -179,6 +172,8 @@
     
     &__view-video-btn{
         border: none;
+        width: 65%;
+        height: 11%;
         padding: 3rem 8rem;
 
         background-image: linear-gradient(to bottom right, var(--color-hero-1), var(--color-button-1));
